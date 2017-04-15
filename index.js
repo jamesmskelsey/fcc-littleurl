@@ -4,7 +4,7 @@ var mongo = require('mongodb').MongoClient;
 // creating a new objectId is required to search for things by objectid in mongo -_-
 var oID = require('mongodb').ObjectID;
 // mongo database url
-var murl = 'mongodb://localhost:27017/littleurl';
+var murl = process.env.MONGODB_URI || 'mongodb://localhost:27017/littleurl';
 
 app.set('view engine', 'pug');
 
